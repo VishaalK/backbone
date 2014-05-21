@@ -11,6 +11,12 @@ Project = Backbone.Model.extend({
 		maxSignups: 5,
 	},	
 
+	validate: function(attributes) {
+		if (attributes.name === "") {
+			return "Name cannot be empty!";
+		}
+	},
+
 	initialize: function() {
 		alert("A project was just created!");
 	},
@@ -20,15 +26,25 @@ Project = Backbone.Model.extend({
 	 * @author vishaalk
 	 */
 	bindEvents: function() {
+		// alert of any changes
 		this.on("change:name", function (model) {
 			alert("Changed name to " + model.get("name"));
+		});
+
+		// alert on invalid
+		this.on("invalid", function(model, error) {
+			alert(error);
 		});
 	}
 
 });
 
 var proj = new Project();
+
 proj.bindEvents();
+
+proj.set({ name: "" });
+
 proj.save({}, { 
 	success: function() { alert('success!'); },
 	error: function() { alert('error!'); }
