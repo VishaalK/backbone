@@ -1,7 +1,10 @@
 var ProjectView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
-		alert('yo');
+	},
+
+	events: { 
+		"click #searchBtn" : "setBusy"
 	},
 
 	render: function() {
@@ -12,7 +15,15 @@ var ProjectView = Backbone.View.extend({
        	// defaulted to an empty div
        	// so we must bind it when we initialize it
         this.$el.html( template );
+	},
+
+
+	setBusy: function() {
+		alert('fjajfsajd');
+		$("#searchBtn").addClass('hidden');
+		$("#searchBtnWaiting").removeClass('hidden');
 	}
+
 });
 
 var projectView = new ProjectView({ el :  $("#ProjectContainer") });
