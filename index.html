@@ -6,11 +6,19 @@
         <title> Circle K Service Day </title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <style>
+        body {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        navbar {
+            margin-bottom: 20px;
+        }
         </style>
     </head>
 
 
     <script type="text/template" id="NavBarTemplate">
+    <div class="container">
         <nav class="navbar navbar-default" role="navigation">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -44,7 +52,7 @@
               </ul>
               <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
+                  <input type="text" class="form-control" id="search" placeholder="Search">
                 </div>
                 <button type=button class="btn btn-submit" id="searchBtn"> Search </button>
                 <button type=button class="btn btn-default hidden" id="searchBtnWaiting"> Searching... <img style="opacity: 0.2;" src="img/ajax-loader.gif" /> </button>
@@ -91,7 +99,8 @@
                 </div>
             </div>
         </form>
-    </div>      
+    </div>   
+    </div>   
     </script>
 
 
@@ -127,6 +136,8 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"> </script> <!-- underscore.js -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"> </script> <!-- backbone.js -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/jquery/jquery-1.10.2.js"></script>
+    <script src="js/jquery/jquery-ui-1.10.4.min.js"></script>
     <!-- <script src="js/models/Project.js"></script> -->
     <script src="js/views/Project.js"></script>
     <script src="js/views/navbar.js"></script>

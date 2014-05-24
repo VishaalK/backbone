@@ -2,8 +2,9 @@ var NavBarView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
 		//this.bindEvents();
-	},
+		
 
+	},
 
 	events: {
 		'click #searchBtn'			: 'setBusy',

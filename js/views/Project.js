@@ -1,10 +1,7 @@
 var ProjectView = Backbone.View.extend({
 	initialize: function() {
 		this.render();
-	},
 
-	events: { 
-		"click #searchBtn" : "setBusy"
 	},
 
 	render: function() {
@@ -17,12 +14,6 @@ var ProjectView = Backbone.View.extend({
         this.$el.html( template );
 	},
 
-
-	setBusy: function() {
-		alert('fjajfsajd');
-		$("#searchBtn").addClass('hidden');
-		$("#searchBtnWaiting").removeClass('hidden');
-	}
 
 });
 
