@@ -15,7 +15,7 @@ var ProjectView = Backbone.View.extend({
 		alert('clicky');
 	},
 
-	template: _.template('<div class="col-md-6 col-md-offset-3 well"><h4><%= title %></h4><p><%= description %></p></div>'),
+	template: _.template('<div class="col-md-6 col-md-offset-3 well"><h4><%= title %><a class="pull-right" href="projects/1">Heyo</a></h4><p><%= description %></p></div>'),
 
 	render: function() {
 		this.$el.html(this.template(this.model.toJSON()));

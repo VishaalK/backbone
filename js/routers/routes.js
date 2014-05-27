@@ -1,14 +1,13 @@
 var Router = Backbone.Router.extend({
     routes: {
-        "help"          :   "help",
-        "projects/:id"  :   "getProject"
+        "projects/:id"  :   "show"
     },
 
-    help: function() {
-        alert('help me?');
+    initialize: function(options) {
+        this.projectList = options.projectList;
     },
 
-    getProject: function(id) {
+    show: function(id) {
         alert(id);
     }
 });

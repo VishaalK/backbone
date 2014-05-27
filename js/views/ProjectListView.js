@@ -18,3 +18,4 @@ var ProjectListView = Backbone.View.extend({
 });
 
 var projectListView = new ProjectListView({ collection: projectList, el : $('#ProjectContainer') });
+projectListView.addOne(project);
